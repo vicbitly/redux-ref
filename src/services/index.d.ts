@@ -5,6 +5,11 @@ be there, but for the reference implementation, we'll leave this with their
 natural origins (the service layer).
 */
 
+export interface Error {
+  message: string,
+  code: number
+}
+
 export interface User {
   login: string;
   fullName: string;

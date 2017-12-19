@@ -1,21 +1,21 @@
-import { User } from '../services';
+import { Error, User } from '../services';
 import { getUsers } from '../services/users';
 import { USERS } from './index';
-import { AnyAction } from 'redux';
 import { RootStore } from '../reducers';
 import { ThunkAction } from 'redux-thunk';
+import { AppAction } from '../actions';
 
-export function loadUsersSuccess(users: User[]): AnyAction {
+export function loadUsersSuccess(users: User[]): AppAction<User[]> {
   return {
     type: USERS.LOAD_USERS_SUCCESS,
-    users
+    payload: users
   };
 }
 
-export function loadUsersFailure(error: {}): AnyAction {
+export function loadUsersFailure(error: Error): AppAction<Error> {
   return {
     type: USERS.LOAD_USERS_ERROR,
-    error
+    payload: error
   };
 }
 

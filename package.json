@@ -24,21 +24,6 @@
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
     "@types/redux-immutable-state-invariant": "^2.0.4",
-    "redux-immutable-state-invariant": "^2.1.0",
-    "ts-jest": "^22.0.0"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "redux-immutable-state-invariant": "^2.1.0"
   }
 }

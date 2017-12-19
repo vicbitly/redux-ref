@@ -16,7 +16,7 @@ export const UsersReducer: Reducer<UsersStore> =
 
   switch (action.type) {
     case ACTIONS.USERS.LOAD_USERS_SUCCESS:
-      newState = { users: [...action.users] };
+      newState = { users: [...action.payload] };
       return newState;
 
     default:
