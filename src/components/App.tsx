@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { RootStore } from '../reducers';
 import { requestUsers } from '../actions/users';
 import { UserList } from './UserList';
-import '.App.css';
 
 class App extends React.Component<Props> {
   render() {
