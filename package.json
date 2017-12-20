@@ -19,12 +19,18 @@
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {
+    "@types/chai": "^4.0.10",
     "@types/jest": "^21.1.8",
+    "@types/mocha": "^2.2.44",
     "@types/node": "^8.5.1",
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
     "@types/react-redux": "^5.0.14",
     "@types/redux-immutable-state-invariant": "^2.0.4",
-    "redux-immutable-state-invariant": "^2.1.0"
+    "@types/sinon": "^4.1.2",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "redux-immutable-state-invariant": "^2.1.0",
+    "sinon": "^4.1.3"
   }
 }
