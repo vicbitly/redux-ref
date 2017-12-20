@@ -34,3 +34,9 @@ This maintains the state of the app. It acts as a local datastore.
 - Selectors: Store-to-component translation layer
 
 - React: Containers, Components
+
+
+Testing:
+- Unit tests with Jest (runner, mocks, and assertions built-in)
+- React Component tests with Enzyme
+- 

@@ -1,17 +1,16 @@
 import * as React from 'react';
-import { User } from '../services';
 import { Counter } from '../components/Counter';
 
 interface Props {
-  users: User[];
+  items: string[];
   count: number;
 }
 
-export const UserList = (props: Props) => {
+export const List = (props: Props) => {
   return (
     <div>
       <ul>
-        {props.users.map((user) => <li key={user.login}>{user.fullName}</li>)}
+        {props.items.map((item) => <li key={item}>{item}</li>)}
       </ul>
       <Counter count={props.count} />
     </div>

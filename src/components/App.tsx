@@ -3,10 +3,16 @@ import { Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { RootStore } from '../reducers';
 import { requestUsers } from '../actions/users';
+import { usersSelector, usersCountSelector, usersFullnamesSelector } from '../selectors/users';
 import { UserList } from './UserList';
+import { List } from './List';
 
 class App extends React.Component<Props> {
   render() {
+    const users = usersSelector(this.props.state);
+    const userCount = usersCountSelector(this.props.state);
+    const userFullnames = usersFullnamesSelector(this.props.state);
+
     return (
       <div className="App">
         <div className="App-header">
@@ -19,9 +25,14 @@ class App extends React.Component<Props> {
             />
           </p>
         </div>
-        {(this.props.state.users.users.length > 0) && <div>
-          <UserList users={this.props.state.users.users} />
-        </div>}
+        {(userCount > 0) && (<div>
+          <div>
+            <UserList users={users} count={userCount} />
+          </div>
+          <div>
+            <List items={userFullnames} count={userCount} />
+          </div>
+        </div>)}
       </div>
     );
   }
