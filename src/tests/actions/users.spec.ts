@@ -32,4 +32,11 @@ describe('users actions', () => {
       expect(actual.payload).toEqual(mockError);
     });
   });
+
+  describe('requestUsers', () => {
+    it('when successful returns a list of users', () => {
+      const thunk = requestUsers();
+
+    });
+  });
 });
