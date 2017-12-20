@@ -7,6 +7,24 @@ const mockError: Error = {
   code: 500
 };
 
+const mockUsers = [
+  {
+    login: 'mock',
+    fullName: 'mock mock mock'
+  }
+];
+
+jest.mock('../../services/users', () => {
+  return {
+    getUsers: () => new Promise((res, rej) => res([...mockUsers]))
+  };
+});
+
+// replace this with a spy
+const mockDispatch = (data) => {
+  console.log(data); // tslint:disable-line
+};
+
 describe('users actions', () => {
   describe('loadUsersSuccess', () => {
     it('returns an action for load users completing successfully', () => {
@@ -37,6 +55,9 @@ describe('users actions', () => {
     it('when successful returns a list of users', () => {
       const thunk = requestUsers();
 
+      thunk(mockDispatch, null, null).then((data) => {
+        // assert on the mockDispatch spy
+      });
     });
   });
 });

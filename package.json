@@ -16,6 +16,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "test-jest": "jest",
+    "test-mocha": "mocha -r tests/**/*.spec.ts",
     "eject": "react-scripts-ts eject"
   },
   "devDependencies": {

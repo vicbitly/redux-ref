@@ -6,6 +6,7 @@ import { requestUsers } from '../actions/users';
 import { usersSelector, usersCountSelector, usersFullnamesSelector } from '../selectors/users';
 import { UserList } from './UserList';
 import { List } from './List';
+import './App.css';
 
 class App extends React.Component<Props> {
   render() {
